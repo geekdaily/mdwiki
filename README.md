@@ -1,35 +1,38 @@
-[![Build Status](https://travis-ci.org/Dynalon/mdwiki.png?branch=master)](https://travis-ci.org/Dynalon/mdwiki)
+<!-- TODO: get CI running again  -->
+<!-- [![Build Status](https://travis-ci.org/Dynalon/mdwiki.png?branch=master)](https://travis-ci.org/Dynalon/mdwiki) -->
 
 MDwiki
 ======
 
-100% static single file CMS/Wiki done purely with client-side Javascript and HTML5.
+<!-- TODO: update when/if there's significant difference/progress -->
+100% static single file CMS/Wiki done purely with client-side Javascript and HTML5. Here's some [lovely documentation](http://www.mdwiki.info).
 
-See http://www.mdwiki.info for more info and documentation.
-------
+## !! This project is currently in experimental/learning mode!!
 
-## !! This project is currently unmaintained!!
+I'm just learning node and javascript, so I wouldn't rely on this fork if I were you.
 
 Download
 --------
 
+<!-- TODO: put up a v0.7.0 release then change this -->
 See <https://github.com/Dynalon/mdwiki/releases> for readily precompiled releases.
 
-How to build from source
-------------------------
-(applies to master branch, stable may differ)
+How to build a clean "distribution" copy from source
+----------------------------------------------------
 
-1. Install node.js >= 0.10 and npm (if not included)
+1. Install node and npm
 2. Clone the mdwiki repo
-3. Install deps and build MDwiki (you need automake installed - if you are on Windows check the contents of the Makefile for the list of commands to run them manually):
+3. Install node dependencies: `npm install && npm update`
+4. Build MDwiki (you need automake installed - if you are on Windows check the contents of the Makefile for the list of commands to run them manually):
 
 ```
     make
 ```
 
-4. Find the `mdwiki.html` in the `dist/` folder
+5. Copy `dist/mdwiki.html` to where you want it installed
 
-5. Development
+How to build a debug/development copy from source
+-------------------------------------------------
 
 For development, use
 
@@ -37,6 +40,14 @@ For development, use
 
 To get unminified source code compiled to `dist/mdwiki-debug.html`, as well as auto file watching and livereload support. Symlink the development mdwiki file into your webroot for testing.
 
+<!-- TODO: What's this -->
+<!-- [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Dynalon/mdwiki/trend.png)](https://bitdeli.com/free "Bitdeli Badge") -->
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Dynalon/mdwiki/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Things To Do
+------------
 
+[] Get rid of bootstrap affix dependency
+[] Upgrade to latest bootstrap package
+[] move from bootstrap.less to scss
+[] remove bootstrap-less package
+[] resolve deprecation warning in tsconfig.json
